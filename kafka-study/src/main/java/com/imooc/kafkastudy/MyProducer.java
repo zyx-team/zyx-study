@@ -22,7 +22,7 @@ public class MyProducer {
     static {
 
         Properties properties = new Properties();
-        properties.put("bootstrap.servers", "127.0.0.1:9092");
+        properties.put("bootstrap.servers", "192.168.31.102:9092");
         properties.put("key.serializer",
                 "org.apache.kafka.common.serialization.StringSerializer");
         properties.put("value.serializer",
@@ -60,22 +60,22 @@ public class MyProducer {
     private static void sendMessageCallback() {
 
         ProducerRecord<String, String> record = new ProducerRecord<>(
-                "imooc-kafka-study-x", "name", "callback"
+                "zyx-x", "name", "callback"
         );
         producer.send(record, new MyProducerCallback());
 
         record = new ProducerRecord<>(
-                "imooc-kafka-study-x", "name-x", "callback"
+                "zyx-x", "name-x", "callback"
         );
         producer.send(record, new MyProducerCallback());
 
         record = new ProducerRecord<>(
-                "imooc-kafka-study-x", "name-y", "callback"
+                "zyx-x", "name-y", "callback"
         );
         producer.send(record, new MyProducerCallback());
 
         record = new ProducerRecord<>(
-                "imooc-kafka-study-x", "name-z", "callback"
+                "zyx-x", "name-z", "callback"
         );
         producer.send(record, new MyProducerCallback());
 
